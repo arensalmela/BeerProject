@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((data) => {
+      const beer = data[0];
+      const name = beer.name;
+      const suggestedFoodPairing = beer.food_pairing[0];
+      const beerImage = beer.image_url;
+      const beerDescription = beer.description;
+      const style = beer.tagline;
       console.log(data);
-      const name = data[0].name;
-      const suggestedFoodPairing = data[0].food_pairing[0];
-      const beerImage = data[0].image_url;
-      console.log(name);
-      console.log(suggestedFoodPairing);
     });
 });
