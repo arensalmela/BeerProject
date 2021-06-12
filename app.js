@@ -1,5 +1,8 @@
 //Event listener for API Call. Returns Array
 document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.querySelector(".beerBtn");
+  const randomBeer = document.querySelector(".randomBeer");
+  const descriptionDisplay = document.querySelector(".description");
   fetch("https://api.punkapi.com/v2/beers/random")
     .then((response) => {
       return response.json();
@@ -12,5 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const beerDescription = beer.description;
       const style = beer.tagline;
       console.log(data);
+      randomBeer.innerHTML = name + " " + style;
+      descriptionDisplay.innerHTML = beerDescription;
     });
 });
