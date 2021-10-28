@@ -3,7 +3,7 @@
 html,
 body {
   height: 100vh;
-  background-color: orangered;
+  background-color: rgb(0, 162, 255);
 }
 
 .container {

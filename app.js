@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.querySelector(".beerBtn");
   const randomBeer = document.querySelector(".randomBeer");
   const descriptionDisplay = document.querySelector(".description");
-  //const beerImageDisplay = document.querySelector(".imageRoute");
+  const beerImageDisplay = document.querySelector(".imageRoute");
   const suggestedFoodPairingDisplay = document.querySelector(".foodPairing");
 
   function data() {
@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const beerDescription = beer.description;
         const style = beer.tagline;
         console.log(data);
-        randomBeer.innerHTML = name + " " + style;
+        randomBeer.innerHTML = name + " | | " + style;
         descriptionDisplay.innerHTML = beerDescription;
         suggestedFoodPairingDisplay.innerHTML = suggestedFoodPairing;
-        //beerImageDisplay.innerHTML = beerImage;
+        beerImageDisplay.innerHTML = beerImage;
       });
   }
   startBtn.addEventListener("click", data);
